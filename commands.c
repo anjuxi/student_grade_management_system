@@ -467,7 +467,10 @@ void cmd_subjects(GradeSystem *sys) {
                 char prompt[64];
                 snprintf(prompt, sizeof(prompt), "第 %d 科名称: ", i + 1);
                 if (!ui_input_line(buf, sizeof(buf), prompt) || buf[0] == '\0') {
-                    snprintf(sys->subjects[i], 16, "科目%d", i + 1);   /* 用户没填就给个默认名。 */
+                    char tmp[32];                              /* 临时 buffer 够大，绕开 GCC 截断告警。 */
+                    snprintf(tmp, sizeof(tmp), "科目%d", i + 1);
+                    strncpy(sys->subjects[i], tmp, 15);
+                    sys->subjects[i][15] = '\0';
                 } else {
                     strncpy(sys->subjects[i], buf, 15);
                     sys->subjects[i][15] = '\0';

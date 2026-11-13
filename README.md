@@ -277,7 +277,6 @@ python test_student.py
 
 - 📫 anjuxi.ME@outlook.com
 - 📞 sip:anjuxi@sip.linphone.org
-- 🔗 https://github.com/anjuxi/student_grade_management_system
 
 ---
 

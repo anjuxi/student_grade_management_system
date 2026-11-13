@@ -1,0 +1,27 @@
+# 编译产物
+*.exe
+*.o
+*.obj
+*.out
+*.class
+*.pyc
+*.so
+*.dll
+
+# Python 缓存
+__pycache__/
+
+# 运行时数据（存档和导出 CSV）
+students.dat
+students.csv
+
+# 编辑器 / IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+Thumbs.db
+.DS_Store
